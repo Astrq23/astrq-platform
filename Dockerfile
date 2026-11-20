@@ -1,5 +1,5 @@
 # Multi-stage: build the dashboard, build the Rust backend, run both from a slim image.
-FROM node:22-slim AS web
+FROM node:26-slim AS web
 WORKDIR /app/frontend
 COPY frontend/package.json frontend/package-lock.json ./
 RUN npm ci --no-audit --no-fund
